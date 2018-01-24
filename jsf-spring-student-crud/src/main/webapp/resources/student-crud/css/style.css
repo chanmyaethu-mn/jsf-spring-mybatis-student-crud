@@ -1,0 +1,35 @@
+/* LEFT MENU */
+.SlimMenu #layout-menu-cover {
+  width: 0px!important;
+}
+.SlimMenu #layout-portlets-cover {
+    margin-left: 0px!important;
+}
+.layout-tab-submenu {
+	margin-left: 0px!important;
+	width: 100%!important;
+}
+
+
+/* ATTACHMENT IMAGE */
+.img-remove {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+.link-remove {
+    margin-left: 70px;
+    position: absolute;
+    z-index: 1;
+}
+
+.ui-datagrid-noborder {border: none;}
+
+/* IMAGE DIALOG FORM */
+.img { width: auto; height: 100%;}
+.ui-dialog .ui-dialog-content { padding: 0px!important}
+#imageDialogForm .arrow { position: absolute; top: 40%; width: 100%;}
+#imageDialogForm .arrow a:first-child { float: left; outline: none;}
+#imageDialogForm .arrow a:first-child img { -webkit-filter: drop-shadow(1px 1px 6px #fff);filter: drop-shadow(1px 1px 6px #fff);}
+#imageDialogForm .arrow a:last-child { position: absolute; right: 0px; outline: none;}
+#imageDialogForm .arrow a:last-child img { -webkit-filter: drop-shadow(1px 1px 6px #fff); filter: drop-shadow(1px 1px 6px #fff);}

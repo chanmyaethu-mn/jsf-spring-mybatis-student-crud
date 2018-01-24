@@ -1,0 +1,8 @@
+com\chan\test\stds\service\StudentSearchServiceImpl.class
+com\chan\test\stds\actionbean\StudentSearchActionBean.class
+com\chan\test\stds\mapper\StudentSearchMapper.class
+com\chan\test\stds\dao\StudentSearchDaoImpl.class
+com\chan\test\stds\dao\StudentSearchDao.class
+com\chan\test\stds\service\StudentSearchService.class
+com\chan\test\common\BaseBean.class
+com\chan\test\stds\dto\StudentDto.class
