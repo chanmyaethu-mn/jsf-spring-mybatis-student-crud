@@ -16,14 +16,7 @@ public class StudentSearchDaoImpl implements StudentSearchDao {
 
 	@Override
 	public List<StudentDto> getStudentDtoList() {
-		// TODO Auto-generated method stub
 		return studentSearchMapper.getStudentDtoList();
-	}
-
-	@Override
-	public StudentDto getStudentDtoById(int id) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

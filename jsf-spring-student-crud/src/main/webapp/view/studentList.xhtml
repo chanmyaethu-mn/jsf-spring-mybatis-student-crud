@@ -22,31 +22,31 @@
             </h:column>
             <h:column>
                 <f:facet name="header">Student Name</f:facet>
-                <h:outputText value="#{student.name}" />
+                <h:outputText value="#{student.studentName}" />
             </h:column>
             <h:column>
                 <f:facet name="header">Email Address</f:facet>
-                <h:outputText value="#{student.email}" />
+                <h:outputText value="#{student.studentEmail}" />
             </h:column>
             <h:column>
                 <f:facet name="header">Password</f:facet>
-                <h:outputText value="#{student.password}" />
+                <h:outputText value="#{student.studentPassword}" />
             </h:column>
             <h:column>
                 <f:facet name="header">Gender</f:facet>
-                <h:outputText value="#{student.gender}" />
+                <h:outputText value="#{student.studentGender}" />
             </h:column>
             <h:column>
                 <f:facet name="header">Address</f:facet>
-                <h:outputText value="#{student.address}" />
+                <h:outputText value="#{student.studentAddress}" />
             </h:column>
             <h:column>
                 <f:facet name="header">Update</f:facet>
-                <h:commandButton action="#{studentBean.editStudentRecord(student.id)}" value="Update" class="btn btn-primary" />
+                <h:commandButton action="#{studentSearchActionBean.edit(student.studentId)}" value="Update" class="btn btn-primary" />
             </h:column>
             <h:column>
                 <f:facet name="header">Delete</f:facet>
-                <h:commandButton action="#{studentBean.deleteStudentRecord(student.id)}" value="Delete" class="btn btn-danger" />
+                <h:commandButton action="#{studentSearchActionBean.delete(student.studentId)}" value="Delete" class="btn btn-danger" />
             </h:column>
         </h:dataTable>
         <center>

@@ -18,14 +18,7 @@ public class StudentSearchServiceImpl implements StudentSearchService {
 
 	@Override
 	public List<StudentDto> getStudentDtoList() {
-		// TODO Auto-generated method stub
 		return studentSearchDao.getStudentDtoList();
-	}
-
-	@Override
-	public StudentDto getStudentDtoById(int id) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

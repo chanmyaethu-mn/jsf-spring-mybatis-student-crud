@@ -9,101 +9,58 @@ public class StudentDto implements Serializable {
 	 */
 	private static final long serialVersionUID = -7345360975786230675L;
 
-	private int id;
-	private String name;
-	private String email;
-	private String password;
-	private String gender;
-	private String address;
+	private int studentId;
+	private String studentName;
+	private String studentEmail;
+	private String studentPassword;
+	private String studentGender;
+	private String studentAddress;
 
-	/**
-	 * @return the id
-	 */
-	public int getId() {
-		return id;
+	public int getStudentId() {
+		return studentId;
 	}
 
-	/**
-	 * @param id
-	 *            the id to set
-	 */
-	public void setId(int id) {
-		this.id = id;
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
 	}
 
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
+	public String getStudentName() {
+		return studentName;
 	}
 
-	/**
-	 * @param name
-	 *            the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
 	}
 
-	/**
-	 * @return the email
-	 */
-	public String getEmail() {
-		return email;
+	public String getStudentEmail() {
+		return studentEmail;
 	}
 
-	/**
-	 * @param email
-	 *            the email to set
-	 */
-	public void setEmail(String email) {
-		this.email = email;
+	public void setStudentEmail(String studentEmail) {
+		this.studentEmail = studentEmail;
 	}
 
-	/**
-	 * @return the password
-	 */
-	public String getPassword() {
-		return password;
+	public String getStudentPassword() {
+		return studentPassword;
 	}
 
-	/**
-	 * @param password
-	 *            the password to set
-	 */
-	public void setPassword(String password) {
-		this.password = password;
+	public void setStudentPassword(String studentPassword) {
+		this.studentPassword = studentPassword;
 	}
 
-	/**
-	 * @return the gender
-	 */
-	public String getGender() {
-		return gender;
+	public String getStudentGender() {
+		return studentGender;
 	}
 
-	/**
-	 * @param gender
-	 *            the gender to set
-	 */
-	public void setGender(String gender) {
-		this.gender = gender;
+	public void setStudentGender(String studentGender) {
+		this.studentGender = studentGender;
 	}
 
-	/**
-	 * @return the address
-	 */
-	public String getAddress() {
-		return address;
+	public String getStudentAddress() {
+		return studentAddress;
 	}
 
-	/**
-	 * @param address
-	 *            the address to set
-	 */
-	public void setAddress(String address) {
-		this.address = address;
+	public void setStudentAddress(String studentAddress) {
+		this.studentAddress = studentAddress;
 	}
-
 }

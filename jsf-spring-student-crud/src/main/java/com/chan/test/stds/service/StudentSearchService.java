@@ -12,11 +12,4 @@ public interface StudentSearchService {
 	 * @return all student information
 	 */
 	public List<StudentDto> getStudentDtoList();
-	
-	/**
-	 * Get student information by id.
-	 * 
-	 * @return a student information
-	 */
-	public StudentDto getStudentDtoById(int id);
 }
