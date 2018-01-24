@@ -30,6 +30,11 @@ public class StudentUpdateActionBean extends BaseBean implements Serializable{
 		initializeUpdate(null);
 	}
 	
+	/**
+	 * It will load student information which is updated.
+	 * 
+	 * @param studentId
+	 */
 	private void initializeUpdate(Integer studentId) {
 		if (studentId == null) {
 			studentId = (Integer) getFlash().get("studentId");
@@ -42,6 +47,11 @@ public class StudentUpdateActionBean extends BaseBean implements Serializable{
 		}
 	}
 	
+	/**
+	 * It will update student information.
+	 * 
+	 * @return navigation route
+	 */
 	public String update() {
 		getFlash().keep("studentId");
 		int updateResult = 0;
