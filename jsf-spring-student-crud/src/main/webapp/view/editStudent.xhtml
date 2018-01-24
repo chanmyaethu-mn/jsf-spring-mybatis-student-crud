@@ -25,40 +25,57 @@
 			</div>
 			<hr />
 			<div class="form-group">
-				<h:outputLabel for="username" class="control-label col-sm-4">User Name:</h:outputLabel>
+				<h:outputLabel for="studentName" class="control-label col-sm-4">User Name:</h:outputLabel>
 				<div class="col-sm-4">
-					<h:inputText id="name-id" value="#{studentUpdateActionBean.studentUpdateDto.studentName}"
-						class="form-control" />
+					<h:inputText id="studentName" value="#{studentUpdateActionBean.studentUpdateDto.studentName}"
+						class="form-control"
+						required="true"
+						requiredMessage="Please enter username" />
+					<h:message for="studentName" style="color:red"></h:message>
 				</div>
 			</div>
 			<div class="form-group">
-				<h:outputLabel for="email" class="control-label col-sm-4">Email:</h:outputLabel>
+				<h:outputLabel for="studentEmail" class="control-label col-sm-4">Email:</h:outputLabel>
 				<div class="col-sm-4">
-					<h:inputText id="email-id" value="#{studentUpdateActionBean.studentUpdateDto.studentEmail}"
-						class="form-control" />
+					<h:inputText id="studentEmail" value="#{studentUpdateActionBean.studentUpdateDto.studentEmail}"
+						class="form-control"
+						required="true"
+						requiredMessage="Please enter email" />
+					<h:message for="studentEmail" style="color:red"></h:message>
 				</div>
 			</div>
 			<div class="form-group">
-				<h:outputLabel for="password" class="control-label col-sm-4">Password:</h:outputLabel>
+				<h:outputLabel for="studentPassword" class="control-label col-sm-4">Password:</h:outputLabel>
 				<div class="col-sm-4">
-					<h:inputSecret id="password-id" value="#{studentUpdateActionBean.studentUpdateDto.studentPassword}"
-						class="form-control" />
+					<h:inputSecret id="studentPassword" value="#{studentUpdateActionBean.studentUpdateDto.studentPassword}"
+						class="form-control"
+						required="true"
+						requiredMessage="Please enter password" />
+					<h:message for="studentPassword" style="color:red"></h:message>
 				</div>
 			</div>
 			<div class="form-group">
-				<h:outputLabel for="gender" class="control-label col-sm-4">Gender:</h:outputLabel>
+				<h:outputLabel for="studentGender" class="control-label col-sm-4">Gender:</h:outputLabel>
 				<div class="col-sm-4">
-					<h:selectOneRadio value="#{studentUpdateActionBean.studentUpdateDto.studentGender}">
+					<h:selectOneRadio
+						id="studentGender"
+						value="#{studentUpdateActionBean.studentUpdateDto.studentGender}"
+						requiredMessage="Gender is required" required="true">
 						<f:selectItem itemValue="M" itemLabel="Male" />
 						<f:selectItem itemValue="F" itemLabel="Female" />
 					</h:selectOneRadio>
+					<h:message for="studentGender" style="color:red"></h:message>
 				</div>
 			</div>
 			<div class="form-group">
-				<h:outputLabel for="address" class="control-label col-sm-4">Address:</h:outputLabel>
+				<h:outputLabel for="studentAddress" class="control-label col-sm-4">Address:</h:outputLabel>
 				<div class="col-sm-4">
-					<h:inputTextarea value="#{studentUpdateActionBean.studentUpdateDto.studentAddress}" cols="50"
-						rows="5" class="form-control" />
+					<h:inputTextarea id="studentAddress"
+						value="#{studentUpdateActionBean.studentUpdateDto.studentAddress}" cols="50"
+						rows="5" class="form-control"
+						required="true"
+						requiredMessage=""/>
+					<h:message for="studentAddress" style="color:red"></h:message>
 				</div>
 			</div>
 			<div class="form-group">

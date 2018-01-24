@@ -19,7 +19,7 @@
 			<div class="form-group">
 				<div class="col-sm-4"></div>
 				<div class="col-sm-4">
-					<h2>Create Student Record</h2>
+					<h2>Create New Students</h2>
 				</div>
 			</div>
 			<hr />
@@ -48,7 +48,8 @@
 				<div class="col-sm-4">
 					<h:inputSecret id="studentPassword"
 						value="#{studentRegisterActionBean.studentRegisterDto.studentPassword}"
-						class="form-control" requiredMessage="Please enter password">
+						class="form-control" requiredMessage="Please enter password"
+						required="true">
 					</h:inputSecret>
 					<h:message for="studentPassword" style="color:red"></h:message>
 				</div>
@@ -71,7 +72,7 @@
 					<h:inputTextarea id="studentAddress"
 						value="#{studentRegisterActionBean.studentRegisterDto.studentAddress}" cols="50"
 						rows="5" class="form-control"
-						requiredMessage="Address is required"
+						requiredMessage="Please enter address"
 						required="true">
 					</h:inputTextarea>
 					<h:message for="studentAddress" style="color:red"></h:message>
