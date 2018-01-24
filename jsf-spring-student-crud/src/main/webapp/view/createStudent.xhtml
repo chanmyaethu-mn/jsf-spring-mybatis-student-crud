@@ -1,0 +1,97 @@
+<!DOCTYPE f:view PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+	<h:head>
+		<h:outputStylesheet name="bootstrap/bootstrap.css"
+			library="student-crud"></h:outputStylesheet>
+		<title>Create Student</title>
+		<style type="text/css">
+			.btnWidth {
+				width: 80px;
+			}
+</style>
+	</h:head>
+	<h:body>
+		<h:form id="createStudentForm" class="form-horizontal">
+			<div class="form-group">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4">
+					<h2>Create Student Record</h2>
+				</div>
+			</div>
+			<hr />
+			<div class="form-group">
+				<h:outputLabel for="studentName" class="control-label col-sm-4">User Name:</h:outputLabel>
+				<div class="col-sm-4">
+					<h:inputText id="studentName"
+						value="#{studentRegisterActionBean.studentRegisterDto.studentName}"
+						class="form-control" requiredMessage="Please enter username" required="true">
+					</h:inputText>
+					<h:message for="studentName" style="color:red"></h:message>
+				</div>
+			</div>
+			<div class="form-group">
+				<h:outputLabel for="studentEmail" class="control-label col-sm-4">Email:</h:outputLabel>
+				<div class="col-sm-4">
+					<h:inputText id="studentEmail"
+						value="#{studentRegisterActionBean.studentRegisterDto.studentEmail}"
+						class="form-control" requiredMessage="Please enter email" required="true">
+					</h:inputText>
+					<h:message for="studentEmail" style="color:red"></h:message>
+				</div>
+			</div>
+			<div class="form-group">
+				<h:outputLabel for="studentPassword" class="control-label col-sm-4">Password:</h:outputLabel>
+				<div class="col-sm-4">
+					<h:inputSecret id="studentPassword"
+						value="#{studentRegisterActionBean.studentRegisterDto.studentPassword}"
+						class="form-control" requiredMessage="Please enter password">
+					</h:inputSecret>
+					<h:message for="studentPassword" style="color:red"></h:message>
+				</div>
+			</div>
+			<div class="form-group">
+				<h:outputLabel for="studentGender" class="control-label col-sm-4">Gender:</h:outputLabel>
+				<div class="col-sm-4">
+					<h:selectOneRadio id="studentGender"
+						value="#{studentRegisterActionBean.studentRegisterDto.studentGender}"
+						requiredMessage="Gender is required" required="true">
+						<f:selectItem itemValue="M" itemLabel="Male" />
+						<f:selectItem itemValue="F" itemLabel="Female" />
+					</h:selectOneRadio>
+					<h:message for="studentGender" style="color:red"></h:message>
+				</div>
+			</div>
+			<div class="form-group">
+				<h:outputLabel for="studentAddress" class="control-label col-sm-4">Address:</h:outputLabel>
+				<div class="col-sm-4">
+					<h:inputTextarea id="studentAddress"
+						value="#{studentRegisterActionBean.studentRegisterDto.studentAddress}" cols="50"
+						rows="5" class="form-control"
+						requiredMessage="Address is required"
+						required="true">
+					</h:inputTextarea>
+					<h:message for="studentAddress" style="color:red"></h:message>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4">
+					<div class="col-sm-2">
+						<h:commandButton value="Save"
+							action="#{studentRegisterActionBean.register()}"
+							class="btn btn-success btnWidth" />
+					</div>
+					<div class="col-sm-1"></div>
+					<div class="col-sm-2">
+						<h:link outcome="studentList" value="View Students Record List"
+							class="btn btn-primary" />
+					</div>
+				</div>
+			</div>
+		</h:form>
+	</h:body>
+</f:view>

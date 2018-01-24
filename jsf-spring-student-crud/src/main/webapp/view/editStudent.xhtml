@@ -1,0 +1,74 @@
+<!DOCTYPE f:view PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+	<h:head>
+		<h:outputStylesheet name="bootstrap/bootstrap.css"
+			library="student-crud"></h:outputStylesheet>
+		<title>Update Student</title>
+
+		<style type="text/css">
+			.updateBtnStyle {
+				width: 80px !important;
+			}
+		</style>
+	</h:head>
+	<h:body>
+		<h:form id="form" class="form-horizontal">
+			<div class="form-group">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4">
+					<h2>Update Student Record</h2>
+				</div>
+			</div>
+			<hr />
+			<div class="form-group">
+				<h:outputLabel for="username" class="control-label col-sm-4">User Name:</h:outputLabel>
+				<div class="col-sm-4">
+					<h:inputText id="name-id" value="#{studentUpdateActionBean.studentUpdateDto.studentName}"
+						class="form-control" />
+				</div>
+			</div>
+			<div class="form-group">
+				<h:outputLabel for="email" class="control-label col-sm-4">Email:</h:outputLabel>
+				<div class="col-sm-4">
+					<h:inputText id="email-id" value="#{studentUpdateActionBean.studentUpdateDto.studentEmail}"
+						class="form-control" />
+				</div>
+			</div>
+			<div class="form-group">
+				<h:outputLabel for="password" class="control-label col-sm-4">Password:</h:outputLabel>
+				<div class="col-sm-4">
+					<h:inputSecret id="password-id" value="#{studentUpdateActionBean.studentUpdateDto.studentPassword}"
+						class="form-control" />
+				</div>
+			</div>
+			<div class="form-group">
+				<h:outputLabel for="gender" class="control-label col-sm-4">Gender:</h:outputLabel>
+				<div class="col-sm-4">
+					<h:selectOneRadio value="#{studentUpdateActionBean.studentUpdateDto.studentGender}">
+						<f:selectItem itemValue="M" itemLabel="Male" />
+						<f:selectItem itemValue="F" itemLabel="Female" />
+					</h:selectOneRadio>
+				</div>
+			</div>
+			<div class="form-group">
+				<h:outputLabel for="address" class="control-label col-sm-4">Address:</h:outputLabel>
+				<div class="col-sm-4">
+					<h:inputTextarea value="#{studentUpdateActionBean.studentUpdateDto.studentAddress}" cols="50"
+						rows="5" class="form-control" />
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4">
+					<h:commandButton value="Update"
+						action="#{studentUpdateActionBean.update()}"
+						class="btn btn-primary updateBtnStyle" />
+				</div>
+			</div>
+		</h:form>
+	</h:body>
+</f:view>
